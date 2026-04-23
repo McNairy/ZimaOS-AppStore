@@ -15,7 +15,6 @@ services:
     ports:
       - '8088:80'
       - '2443:443'
-      - '2443:443'
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
   architectures:
