@@ -27,7 +27,7 @@ x-casaos:
   category: WEB
   icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/forgejo.png
   title:
-    en_us: Forgejo Git Server
+    en_us: Forgejo
   tagline:
     en_us: Self-host a free software focused Git server.
   description:
