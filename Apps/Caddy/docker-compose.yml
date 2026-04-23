@@ -2,20 +2,9 @@ version: "3"
 name: caddy
 services:
   caddy:
-    container_name: caddy
     image: caddy:2
-    labels:
-      icon: https://cdn.brandfetch.io/id6urH6yOB/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1769785145609
-    ports:
-      - target: 80
-        published: "8088"
-        protocol: tcp
-      - target: 443
-        published: "2443"
-        protocol: tcp
-      - target: 443
-        published: "2443"
-        protocol: udp
+    container_name: caddy
+    # environment:
     restart: unless-stopped
     networks:
       - caddy
@@ -23,6 +12,11 @@ services:
       - /DATA/AppData/Caddy/config:/config
       - /DATA/AppData/Caddy/data:/data
       - /DATA/AppData/Caddy/site:/srv
+    ports:
+      - 8088:80
+      - 2443:443
+      - 2443:443
+# ZimaOS/CasaOS Specific Metadata
 x-casaos:
   architectures:
     - amd64
@@ -32,9 +26,11 @@ x-casaos:
   category: WEB
   icon: https://cdn.brandfetch.io/id6urH6yOB/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1769785145609
   title:
-    custom: Caddy Web Server
-  tagline: Self-host an easy to configure web server.
-  description: Caddy Server is a fast, modern, open-source web server written in Go.
-  networks:
-    caddy:
-      external: false
+    en_us: Caddy Web Server
+  tagline:
+    en_us: Self-host an easy to configure web server.
+  description:
+    en_us: Caddy Server is a fast, modern, open-source web server written in Go.
+networks:
+  caddy:
+    external: false
