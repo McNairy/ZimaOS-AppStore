@@ -17,6 +17,8 @@ services:
         published: "2443"
         protocol: udp
     restart: unless-stopped
+    networks:
+      - caddy
     volumes:
       - /DATA/AppData/Caddy/config:/config
       - /DATA/AppData/Caddy/data:/data
