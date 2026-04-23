@@ -1,5 +1,12 @@
 # ZimaOS AppStore
 
+Apps not available by default in the app store that I wanted to install in my home lab.
+
+- Technitium DNS Server ✅
+- Caddy Server
+- Traefik
+- Forgejo
+
 ## Resources
 - [ZimaOS Build Apps](https://www.zimaspace.com/docs/zimaos/Build-Apps)
 - [Awesome CasaOS](https://awesome.casaos.io/content/3rd-party-app-stores/create-your-first-custom-appstore.html#steps)
