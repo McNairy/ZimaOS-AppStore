@@ -10,13 +10,19 @@ services:
       - USER_GID=1000
     restart: unless-stopped
     networks:
-      - forgejo
+      macvlan_net:
+        ipv4_address: ${CONTAINER_IP}  # Must be an unused IP on your host 
     volumes:
       - /DATA/AppData/forgejo:/data
       - /etc/localtime:/etc/localtime:ro
     ports:
       - '3000:3000'
       - '222:22'
+networks:
+  macvlan_net:
+    external: true
+    name: my_macvlan_network
+    
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
   architectures:
