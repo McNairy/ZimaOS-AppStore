@@ -15,6 +15,9 @@ services:
     ports:
       - '8088:80'
       - '2443:443'
+    networks:
+      macvlan_net:
+        ipv4_address: 192.168.42.52 # Must be an unused IP on your host
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
   architectures:
