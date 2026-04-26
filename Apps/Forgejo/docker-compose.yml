@@ -11,7 +11,8 @@ services:
     restart: unless-stopped
     networks:
       macvlan_net:
-        ipv4_address: ${CONTAINER_IP}  # Must be an unused IP on your host 
+        # Haven't figured out how to load this by reference  yet
+        ipv4_address: 192.168.42.51  # Must be an unused IP on your host 
     volumes:
       - /DATA/AppData/forgejo:/data
       - /etc/localtime:/etc/localtime:ro
