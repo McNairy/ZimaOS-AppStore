@@ -38,6 +38,3 @@ x-casaos:
     en_us: Self-host a free software focused Git server.
   description:
     en_us: "Forgejo is a self-hosted lightweight software forge."
-networks:
-  forgejo:
-    external: false
