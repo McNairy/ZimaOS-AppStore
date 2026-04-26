@@ -18,17 +18,13 @@ services:
     sysctls:
       - net.ipv4.ip_local_port_range=1024 65535
     networks:
-      public_net:
+      macvlan_net:
         ipv4_address: 192.168.42.50  # Must be an unused IP on your host
 
-public_net:
-  driver: macvlan
-  driver_opts:
-    parent: eth1
-  ipam:
-    config:
-      - subnet: 192.168.42.0/24
-        gateway: 192.168.42.1    
+networks:
+  macvlan_net:
+    external: true
+    name: my_macvlan_network  
 
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
