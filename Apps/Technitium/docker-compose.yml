@@ -23,13 +23,13 @@ services:
         ipv4_address: 192.168.42.50  # Must be an unused IP on your host
 
 public_net:
-    driver: macvlan
-    driver_opts:
-      parent: eth0  # Replace with your host's physical network interface (e.g., eth0, enp3s0)
-    ipam:
-      config:
-        - subnet: 192.168.42.0/24   # Matches your host's local network range
-          gateway: 192.168.42.1    # Your router's IP
+  driver: macvlan
+  driver_opts:
+    parent: eth1  # Replace with your host's physical network interface (e.g., eth0, enp3s0)
+  ipam:
+    config:
+      - subnet: 192.168.42.0/24   # Matches your host's local network range
+        gateway: 192.168.42.1    # Your router's IP
 
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
