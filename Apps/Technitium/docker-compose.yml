@@ -1,4 +1,3 @@
-version: "3"
 #name: technitium-dns
 services:
   technitium-dns:
@@ -25,11 +24,11 @@ services:
 public_net:
   driver: macvlan
   driver_opts:
-    parent: eth1  # Replace with your host's physical network interface (e.g., eth0, enp3s0)
+    parent: eth1
   ipam:
     config:
-      - subnet: 192.168.42.0/24   # Matches your host's local network range
-        gateway: 192.168.42.1    # Your router's IP
+      - subnet: 192.168.42.0/24
+        gateway: 192.168.42.1    
 
 # ZimaOS/CasaOS Specific Metadata
 x-casaos:
@@ -49,4 +48,3 @@ x-casaos:
   developer: Technitium Software
   screenshot_link:
     - https://technitium.com
-
