@@ -8,7 +8,6 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
-      - CONTAINER_IP=${CONTAINER_IP}s
     restart: unless-stopped
     networks:
       macvlan_net:
