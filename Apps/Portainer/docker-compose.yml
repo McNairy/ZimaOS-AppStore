@@ -7,7 +7,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /DATA/AppData/portainer/portainer_data:/data
     ports:
-      - 9443:9443
+      - 9001:9000 
+      #- 9443:9443  # HTTPS handled by reverse proxy
       #- 8000:8000  # Remove if you do not intend to use Edge Agents
 
 volumes:
