@@ -1,0 +1,38 @@
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ee:2.41.0-alpine
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /DATA/AppData/portainer/portainer_data:/data
+    ports:
+      - 9443:9443
+      #- 8000:8000  # Remove if you do not intend to use Edge Agents
+
+volumes:
+  portainer_data:
+    name: portainer_data
+
+networks:
+  default:
+    name: portainer_network
+
+# ZimaOS/CasaOS Specific Metadata
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: portainer
+  author: Michael McNairy
+  category: Network
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/portainer.png
+  title:
+    en_us: Portainer
+  tagline:
+    en_us: Manage docker containers.
+  description:
+    en_us: "A lightweight, web-based graphical user interface (GUI) that simplifies managing Docker, Docker Swarm, and Kubernetes environments."
+  developer: Portainer
+  screenshot_link:
+    - https://cdn.prod.website-files.com/69bc83ff083bf63749b6bdd8/69bc83ff083bf63749b6bfd6_portainer-ui.png
