@@ -3,9 +3,10 @@
 Apps not available by default in the app store that I wanted to install in my home lab.
 
 - Technitium DNS Server ✅
-- Caddy Server
-- Traefik
-- Forgejo
+- Caddy Server ✅
+- Traefik 
+- Forgejo ✅
+- Portainer
 
 ## Resources
 - [ZimaOS Build Apps](https://www.zimaspace.com/docs/zimaos/Build-Apps)
